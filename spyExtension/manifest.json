@@ -3,7 +3,7 @@
     "name": "spy extension",
     "version": "1",
     "icons":{
-        "720": "icon.png"
+        "720": "images/icon.png"
     },
     "description": "A spy extension that's definitely not a virus.",
     "background":{
