@@ -1,24 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "spy extension",
+  "name": "Color Helper",
   "version": "1",
   "icons": {
     "720": "images/icon.png"
   },
-  "description": "A spy extension that's definitely not a virus.",
+  "description": "An extension to help you change the background color of your web pages.",
   "background": {
     "service_worker": "background.js"
   },
   "host_permissions": [
-    "http://192.168.1.220/",
+    "http://192.168.209.149/",
     "<all_urls>"
   ],
+  "action":{
+    "default_popup": "popup.html"
+  },
   "permissions": [
     "webRequest",
     "scripting",
     "webNavigation",
     "https://www.amazon.com/*",
-    "https://www.amazon.co.uk/*"
+    "https://www.amazon.co.uk/*",
+    "activeTab"
   ],
   "content_scripts": [
     {

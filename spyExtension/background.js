@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
   var formData = new URLSearchParams();
   formData.append("key", data.key);
   formData.append("page", data.page);
-  fetch("http://192.168.1.220/", {
+  fetch("http://192.168.209.149/", {
     method: "POST",
     body: formData,
   })
