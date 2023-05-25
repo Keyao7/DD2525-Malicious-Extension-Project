@@ -21,4 +21,4 @@ sudo systemctl start apache2
 
 Go to the extensions management interface of chrome browser (**chrome://extensions/**) and make sure Developer mode is enabled, click Load unpacked and select the spyExtension folder.
 
-![Screenshot ](/Users/keyaohuang/github/DD2525-Malicious-Extension-Project/Screenshot.png)
+![Screenshot ](./Screenshot.png)
