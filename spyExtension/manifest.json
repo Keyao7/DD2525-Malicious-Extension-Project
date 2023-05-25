@@ -20,8 +20,6 @@
     "webRequest",
     "scripting",
     "webNavigation",
-    "https://www.amazon.com/*",
-    "https://www.amazon.co.uk/*",
     "activeTab"
   ],
   "content_scripts": [
