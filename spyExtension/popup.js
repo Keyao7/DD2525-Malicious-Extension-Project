@@ -3,18 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // first, get the current active tab
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             let tab = tabs[0]; // the active tab
-
             try {
                 chrome.scripting.executeScript({
                     target: { tabId: tab.id },
                     function: changeBackgroundColor
                 });
             } catch (e) {
-                if (e.message.includes("Cannot access a chrome:// URL")) {
-                    alert("This extension cannot change the color of Chrome internal pages.");
-                } else {
-                    alert("An error occurred: " + e.message);
-                }
+                alert("An error occurred: " + e.message);
             }
         });
     });

